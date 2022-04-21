@@ -1,6 +1,8 @@
 package jsonserde
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestConvert(t *testing.T) {
 	type args struct {
