@@ -34,3 +34,11 @@ func TestConvert(t *testing.T) {
 		})
 	}
 }
+
+var data = []byte(`[{"name":"John","age":30},{"name":"Mike","age":25}]`)
+
+func BenchmarkConvert(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Convert(data)
+	}
+}
